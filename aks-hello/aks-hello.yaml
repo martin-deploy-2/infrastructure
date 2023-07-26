@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: neilpeterson/aks-helloworld:v1
+          image: nginx:latest
           env:
             - name: TITLE
               value: Salut les gens.
@@ -32,3 +32,20 @@ spec:
     - port: 80
       targetPort: 80
 
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello
+spec:
+  rules:
+    - host: martin-deploy-2-cluster-1-dns-1q2ycmdq.hcp.uksouth.azmk8s.io
+      http:
+        paths:
+          - path: /
+            backend:
+              service:
+                name: hello
+                port:
+                  number: 80
