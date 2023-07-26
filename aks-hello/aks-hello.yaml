@@ -39,6 +39,7 @@ kind: Ingress
 metadata:
   name: hello
 spec:
+  ingressClassName: nginx
   rules:
     - host: martin-deploy-2-cluster-1-dns-1q2ycmdq.hcp.uksouth.azmk8s.io
       http:
