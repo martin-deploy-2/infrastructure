@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kaniko
+spec:
+  volumes:
+    - name: kaniko-config
+      secret:
+        secretName: martin-deploy-2-ghcr
+  containers:
+    - name: app
+      image: gcr.io/kaniko-project/executor:v1.11.0
+      args:
+        - --destination=ghcr.io/martin-deploy-2/martin-simulator:v1
+        - --context=git://github.com/martin-deploy-2/infrastructure.git#refs/heads/master
+        - --dockerfile=simulator/Dockerfile
+        - --single-snapshot
+      volumeMounts:
+        - mountPath: /kaniko/.docker/config.json
+          name: kaniko-config
+          subPath: .dockerconfigjson
+      resources:
+        limits:
+          cpu: 4000m
+          memory: 8192Mi

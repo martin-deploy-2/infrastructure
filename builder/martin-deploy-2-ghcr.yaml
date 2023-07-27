@@ -1,0 +1,18 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: "true"
+  creationTimestamp: null
+  name: martin-deploy-2-ghcr
+spec:
+  encryptedData:
+    .dockerconfigjson: AgC0dcPVo5x3VCFFwQ+7d1TUzhM0ziwGh/FJZL1kWEGUy0WBEU+/21tY4HHwG/CEouMGGLzK1f/r3xd6QyL9idqSZRynVXx5cobmQOs99zgNY5M297gzDqMAZ8nnoMpPLIXZS6255bro2Kmmd7JKEJFYI8t8th6//6cAdyn9qHjcqSyIETAbHHiHggdGVtKn53+tLZMO6H1CQsgScTFMh4/hTSKbld/E6iWxBn1hed4Uz5aCZBvBc7KQc2/jY/SOTCtvGtZ0EKztTGCW60UaNbxZnfXeyVUS4hgV/y/21GWRL9akrE5LQy6yIfzmbLgCDHVtqHfRGAoVgr2WIhQncsznX8BCRQkJrzPdBEaRc+2fXxxOYkJG8dezM38mnSkSsM6muQkFLVmTTbmJMXAiA0BnxglHl7Ay5FVvC6+9ooLC7I0vD5nClZlIHayvgsAsm79l+ioae/l3Qzh7pYnsIaipRdI6nVoTw75NyGOqgmhloyp37pZ/BNtiXBsrcX+VYxO+eAkguBdN4QpL+4eGJeq5FjpYp7AFY/pd1jtm2DP7FU/9v6CgwHEurbcZGjHbjwvL3TXk0T4LZdB04cDA035Od9YmKlib0tFe3Mub9KaiPtdT4zYF/Yvn/UcOMEpcznaIXCCtt9n3gR6jfl+fF43zE4cJe51epyKtCJ80muMSOB+oENMvDcoDCPdYryauoY8NV2EfYzmJQL0p4pKaKjQeQeWSh0ovmyqF0TZGvc/fqdawYunAtukuIk29v8aOM1bLq85QC8BVaMvonN5l74ejz+NDn97+ysD/ZpynWT3wsgG9vQ9jZMNtppvmeHEL6Not6BnzYnbPScp0Yqm3Jiy7bJmQ2w==
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: "true"
+      creationTimestamp: null
+      name: martin-deploy-2-ghcr
+    type: Opaque
+
