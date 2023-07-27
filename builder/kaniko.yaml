@@ -13,7 +13,8 @@ spec:
       args:
         - --destination=ghcr.io/martin-deploy-2/martin-simulator:v1
         - --context=git://github.com/martin-deploy-2/infrastructure.git#refs/heads/master
-        - --dockerfile=simulator/Dockerfile
+        - --context-sub-path=simulator
+        - --dockerfile=Dockerfile
         - --single-snapshot
       volumeMounts:
         - mountPath: /kaniko/.docker/config.json
