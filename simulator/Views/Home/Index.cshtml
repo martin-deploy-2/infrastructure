@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="display-4">Simulate...</h1>
+
+<p>
+    Start time: <code> @ViewData["StartTime"] </code>
+</p>
+
+<ul>
+
+    <li>
+        <button onclick="shutdown()">Shutdown</button>
+        <p>
+            Simulate a graceful shutdown with error code 0.
+        </p>
+        <script>
+            function shutdown() {
+                fetch("/simulate/shutdown", { method: "POST" })
+            }
+        </script>
+    </li>
+
+    <li>
+        <button onclick="crash()">Crash</button>
+        <p>
+            Simulate a crash with error code 42.
+        </p>
+        <script>
+            function crash() {
+                fetch("/simulate/crash", { method: "POST" })
+            }
+        </script>
+    </li>
+
+	<li>
+		<button onclick="exception()">Exception</button>
+		<p>
+			Simulate an exception without crash.
+		</p>
+		<script>
+			function exception() {
+				fetch("/simulate/exception", { method: "POST" })
+			}
+		</script>
+	</li>
+
+	<li>
+		<button onclick="echo()">Echo</button>
+		<p>
+			Echo endpoint.
+		</p>
+		<script>
+			function echo() {
+				fetch("/simulate/echo", { method: "POST", body: JSON.stringify({ frodo: "oui" }) })
+			}
+		</script>
+	</li>
+
+</ul>
