@@ -11,7 +11,8 @@ spec:
       labels:
         app: simulator
     spec:
-      imagePullSecrets: [martin-deploy-2-ghcr]
+      imagePullSecrets:
+        - name: martin-deploy-2-ghcr
       containers:
         - name: app
           image: ghcr.io/martin-deploy-2/martin-simulator:v1
