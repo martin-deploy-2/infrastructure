@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: simulator
 spec:
-  imagePullSecrets: [martin-deploy-2-ghcr]
   selector:
     matchLabels:
       app: simulator
@@ -12,6 +11,7 @@ spec:
       labels:
         app: simulator
     spec:
+      imagePullSecrets: [martin-deploy-2-ghcr]
       containers:
         - name: app
           image: ghcr.io/martin-deploy-2/martin-simulator:v1
