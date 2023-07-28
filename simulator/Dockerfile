@@ -8,5 +8,6 @@ FROM alpine:3.18.0
 RUN apk add --no-cache aspnetcore7-runtime
 RUN adduser -D dotnet dotnet
 COPY --from=builder --chown=dotnet:dotnet /tmp/builder/publish /home/dotnet/app
+RUN ls -lahFi /home/dotnet/app
 USER dotnet
 CMD [ dotnet, /home/dotnet/app/MartinSimulator.dll ]
