@@ -8,4 +8,4 @@ RUN apk add --no-cache aspnetcore7-runtime
 RUN adduser -D dotnet dotnet
 COPY --from=builder --chown=dotnet:dotnet /tmp/builder/publish /home/dotnet/app
 USER dotnet
-ENTRYPOINT [ "ash", "-c", "dotnet", "/home/dotnet/app/MartinSimulator.dll" ]
+ENTRYPOINT [ "ash", "-c", "dotnet /home/dotnet/app/MartinSimulator.dll" ]
