@@ -44,7 +44,42 @@ public class SimulateController : Controller
         return NoContent();
     }
 
-    [HttpPost]
+	/// <summary>
+	/// An enumeration containing the available robot actions. The available actions are:
+	/// <list type="table">
+	/// <listheader>
+	/// <term>Action</term>
+	/// <term>Description</term>
+	/// <term>Power Consumption</term>
+	/// </listheader>
+	/// <item>
+	/// <term>Forward</term>
+	/// <term>Move forwards in a straight line.</term>
+	/// <term>50W</term>
+	/// </item>
+	/// <item>
+	/// <term>Backward</term>
+	/// <term>Move backwards in a straight line.</term>
+	/// <term>50W</term>
+	/// </item>
+	/// <item>
+	/// <term>RotateLeft</term>
+	/// <term>Rotate to the left.</term>
+	/// <term>30W</term>
+	/// </item>
+	/// <item>
+	/// <term>RotateRight</term>
+	/// <term>Rotate to the right.</term>
+	/// <term>30W</term>
+	/// </item>
+	/// <item>
+	/// <term>Dig</term>
+	/// <term>Tells the robot to dig and obtain a soil sample.</term>
+	/// <term>800W</term>
+	/// </item>
+	/// </list>
+	/// </summary>
+	[HttpPost]
     public IActionResult Crash()
     {
         _logger.LogInformation(nameof(Crash));
