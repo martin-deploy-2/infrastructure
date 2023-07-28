@@ -1,6 +1,7 @@
 FROM alpine:3.18.0 AS builder
 RUN apk add --no-cache dotnet7-sdk
 COPY ./* /tmp/builder/
+RUN ls -lahFi "/tmp/builder"
 RUN dotnet publish "/tmp/builder" --configuration Release --no-self-contained --output "/tmp/builder/publish"
 
 FROM alpine:3.18.0
