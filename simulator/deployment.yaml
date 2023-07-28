@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulator
+spec:
+  imagePullSecrets: [martin-deploy-2-ghcr]
+  selector:
+    matchLabels:
+      app: simulator
+  template:
+    metadata:
+      labels:
+        app: simulator
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/martin-deploy-2/martin-simulator:v1
+          resources:
+            limits:
+              cpu: 4000m
+              memory: 8192Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
