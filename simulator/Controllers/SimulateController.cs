@@ -110,6 +110,11 @@ public class SimulateController : Controller
             };
         }
 
+		_logger.LogInformation("{STRING}", JsonSerializer.Serialize(echo, new JsonSerializerOptions
+		{
+			WriteIndented = true,
+		}));
+
         if (HttpContext.Request.Method == "OPTIONS" &&
             HttpContext.Request.Headers.ContainsKey("WebHook-Request-Origin"))
         {
