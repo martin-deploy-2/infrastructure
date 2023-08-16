@@ -5,6 +5,6 @@ RUN dotnet publish "/tmp/builder" --configuration Release --no-self-contained --
 
 FROM alpine:3.18.0
 RUN apk add --no-cache aspnetcore7-runtime
-COPY --from=builder --chown=dotnet:dotnet /tmp/builder/publish /home/dotnet/app
+COPY --from=builder /tmp/builder/publish /home/dotnet/app
 EXPOSE 5000/tcp
 ENTRYPOINT [ "ash", "-c", "dotnet /home/dotnet/app/MartinSimulator.dll" ]
