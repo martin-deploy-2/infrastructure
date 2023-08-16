@@ -15,11 +15,8 @@ spec:
         - name: martin-deploy-2-ghcr
       containers:
         - name: app
-          image: ghcr.io/martin-deploy-2/martin-simulator:v9
+          image: ghcr.io/martin-deploy-2/martin-simulator:v10
           imagePullPolicy: Always
-          ports:
-            - containerPort: 5000
-              protocol: TCP
           resources:
             limits:
               cpu: 4000m
@@ -41,9 +38,9 @@ spec:
   ports:
     - name: http
       port: 80
-      targetPort: 5000
+      targetPort: 80
       protocol: TCP
     - name: https
       port: 443
-      targetPort: 5000
+      targetPort: 443
       protocol: TCP
