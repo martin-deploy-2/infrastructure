@@ -6,6 +6,7 @@ namespace MartinSimulator.Controllers;
 public class HomeController : Controller
 {
     public static readonly DateTimeOffset StartTime = DateTimeOffset.Now;
+    public static readonly Guid Id = Guid.NewGuid();
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -16,6 +17,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewBag.StartTime = StartTime;
+        ViewBag.Id = Id;
         return View();
     }
 
