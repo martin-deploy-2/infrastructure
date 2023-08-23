@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: gh-webhook-echo
+spec:
+  entrypoint: main
+  arguments:
+    parameters:
+      - name: message
+  templates:
+    - name: main
+      inputs:
+        parameters:
+          - name: message
+            valueFrom:
+              parameter: message
+      container:
+        image: alpine:3.18.0
+        command: [echo]
+        args: ["{{inputs.parameters.message}}"]

@@ -1,0 +1,20 @@
+﻿
+# This file is generated, do not edit manually.
+# When editing `C:\Users\plessym\Documents\martin-deploy-2\infrastructure\clusters/internal/namespaces/argo/sealed-secrets/argo-workflows-webhook-clients.yaml.secret`, run `Protect-Secret.ps1` to regenerate.
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: "true"
+  creationTimestamp: null
+  name: argo-workflows-webhook-clients
+spec:
+  encryptedData:
+    github: AgB5urFBPkCN1EewOGSjSe2zubwe8BM9enw+r0prWlxdVotO2nM5s9VAFGG8Xq/pvwa5g5MhdN/G1IE9NZrwR+C3f1CKXY504YQLjxPD095CUl/AIl1cHL+os1WocT7ruOo0IShPZeGyc3guu0UU8W0morwfgT+yUHfBr61jeFkcTZGgpeUaZXc3to7b4xohnHD0jy9FiY24Fuv45hlAtjatN9EPw6nbrY6qs7OnmDVMio/Xw+vcssw8c/SGesExWPPeeqhV8uxOk0FVKeUrF8/SyRplU+zIQIejDBX4rQrtq+bUL+ezIT2CIsHJwRM3bJZZCof8x5zK0Y8B25A/hcb5pGjUJQ1Y3o5/5x0LSmY3t2PCy3pBZoygujelZOK4okhuNxFxX1G6O7hgNQCOwUMw4sQDdapLkhB+m45I2SbZy25EowtvSi8Zba+95NDSygwgiKz4uhhKPx/yRrTuZI1AUuPZcJSfybLeh2v8EbuUmGboLiYGGs4TdY4lsBWBd5hA3MNhOQtvLY34fL1hKMNZjwBHDXIDt4uHbMUFAhU1jaMSusP0V6mjSRNFGONwBWNSzJR7NAj4c9+CVByFB/45kXGFfCjV0ixu1ft12Os5qHm7wOBLL/YVgiK5SBB4Eg62ms4QhVOGE0TSHkMCB47cyHwosgc24b+durWot8bchdfl/VLdnsCnLf2HnnO0gmX9c9eu5JUQAEv57h1Bq81peK2y1vfqSemr/AI5scO4rYHprq9srccwkubr3gTsTQDePnXxTRr5VEPIYnvyHQiPIVRUF7xqtRnhqw+8E+9BvGjONPW2qjGXi+jXWA2zP6IoMA3QLi04
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: "true"
+      creationTimestamp: null
+      name: argo-workflows-webhook-clients
+

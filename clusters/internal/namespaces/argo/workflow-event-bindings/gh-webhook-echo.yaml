@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowEventBinding
+metadata:
+  name: gh-webhook-echo
+spec:
+  event:
+    # metadata header name must be lowercase to match in selector
+    selector: discriminator == "gh-webhook-echo" # && payload.message != "" && metadata["x-argo-e2e"] == ["true"]
+  submit:
+    workflowTemplateRef:
+      name: gh-webhook-echo
+    arguments:
+      parameters:
+        - name: message
+          valueFrom:
+            event: payload.head_commit.message
+
+# https://51.11.57.11:2746/api/v1/events/{namespace}/{discriminator}
+# https://51.11.57.11:2746/api/v1/events/argo/gh-webhook-echo

@@ -1,0 +1,2 @@
+﻿*.yaml.secret
+sealed-secrets-cert.pem

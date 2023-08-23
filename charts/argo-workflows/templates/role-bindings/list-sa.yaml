@@ -1,0 +1,22 @@
+{{- $argoValues := index .Values "argo-workflows" -}}
+{{- $context := dict -}}
+
+{{- range $key, $val := . -}}
+  {{- if $key | eq "Values" -}}
+    {{- $_ := set $context $key $argoValues -}}
+  {{- else -}}
+    {{- $_ := set $context $key $val -}}
+  {{- end -}}
+{{- end -}}
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "argo-workflows.fullname" $context }}-list-sa
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ include "argo-workflows.fullname" $context }}-list-sa
+subjects:
+  - kind: ServiceAccount
+    name: {{ include "argo-workflows.serverServiceAccountName" $context }}

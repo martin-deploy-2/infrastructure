@@ -1,0 +1,21 @@
+﻿
+# This file is generated, do not edit manually.
+# When editing `C:\Users\plessym\Documents\martin-deploy-2\infrastructure\clusters/internal/namespaces/default/sealed-secrets/martin-deploy-2-ghcr.yaml.secret`, run `Protect-Secret.ps1` to regenerate.
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: "true"
+  creationTimestamp: null
+  name: martin-deploy-2-ghcr
+spec:
+  encryptedData:
+    .dockerconfigjson: AgAg5FYxtkiwgVH0n8cJkdUe2BPX5/QgnBp94WvJDbIKtHXmbwTK5LdVBGENC1jubo3G575r2a28Qoo9DbYzBW+596wo9VuXLj4sz5onB8uYact0OGugbZThGalgOt6xsnVZKrGZ4tZUH6dNnxj420DJ4qcTDlas3lMLzeYFLs7nuSDzBe/+fJP9eR0MqhJQIJB4XA1+kfsn9W/0YVILGHJQeVA5NNHVKwyjCdfKSxGZTAzOYpulTkT0Nd0ZzrpraKeqraM+HDCX5h6JONO+bwl1kBjSQ0ZaedV6cbGLB0tDq5ZNMMlTw7xXfy5MHk/hIynjo5+KGLBi8pIUqEW79qL31AlY3Bt8pgc/jCRnyYa4IrvLmM4EG7NLsFu6Snacqx7FS+eERNRpJXewmUMRQB0bBf2UZX4ZuIEvnxgK9mza+P7gKyh/Z56JZHxFO/rz5YGPJdGHeeBSbmsgJlLfXZy+zqICvW9RNDNPxfgPESjhUeiynIPXCZfHx845FHNWnllrprFylSO/4w72qzQziYVa/vOswhw1T4Aj8pxMgfs5wIdUM1pm3aVpcCC+i5v/L1hb0HwhWx+AiUxsAt0soHOKXYtkr6x+qMSHvyQTcwJQNlT7jXs95orKu6v7CUWQ9GfE61tJDc9LPCFVyxu+v7O+rnRSvfb/DxUSQ2bqBeIR82eweNhilOQSaSOHX8rh6G6NeoVrsL0EZFUey3UzAH6e1W41HgdImTheeVWLUH6n/qSPjOjd4EbBO7Wm4igLEbVsLAdOMoQziZzj7DuvJBk+1AuxUDX7twmWdRQNiNtixtDqRYHkuRHQj1DbzbIfDPfAxwMnQxiFRfmeL35ai6FUyKm2c8dCZnMET5kVUVMrOBbhZNjtBc+Gorxz+g==
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: "true"
+      creationTimestamp: null
+      name: martin-deploy-2-ghcr
+    type: kubernetes.io/dockerconfigjson
+
